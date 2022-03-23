@@ -1,7 +1,6 @@
 
-import java.util.Arrays;
-import java.util.Random;
-public class vierGewinnt
+import java.io.Serializable;
+public class vierGewinnt implements Serializable
 {
   private int row=6;
   private int column=7;
@@ -100,9 +99,9 @@ public class vierGewinnt
         colour = board[a][b];
       } // end of for
     } // end of for
-   
+    
     streak = 0;
-   
+    
     //spalte von unten nach oben
     for (int b = 0; b < column; b++) {
       streak = 0;
@@ -132,9 +131,9 @@ public class vierGewinnt
         colour = board[a][b];
       } // end of for
     } // end of for
-   
+    
     streak = 0;
-   
+    
     //diagonale von links-unten nach rechts-oben
     for (int i = 0; i < 3; i++)
     {
@@ -166,13 +165,13 @@ public class vierGewinnt
         colour = board[a][b];
         b++;
       } // end of for
-     
+      
       streak = 0;
-     
+      
     }
-   
-   
-   
+    
+    
+    
     //diagonale von links-unten nach rechts-oben
     for (int i = 1; i < 4; i++)
     {
@@ -204,13 +203,13 @@ public class vierGewinnt
         colour = board[a][b];
         b++;
       } // end of for
-     
+      
       streak = 0;
-     
+      
     }
-   
-   
-   
+    
+    
+    
     //diagonale von rechts-unten nach links-oben
     for (int i = 0; i < 3; i++)
     {
@@ -242,13 +241,13 @@ public class vierGewinnt
         colour = board[a][b];
         b--;
       } // end of for
-     
+      
       streak = 0;
-     
+      
     }
-   
-   
-   
+    
+    
+    
     //diagonale von rechts-unten nach links-oben
     for (int i = 3; i < 6; i++)
     {
@@ -280,11 +279,11 @@ public class vierGewinnt
         colour = board[a][b];
         b--;
       } // end of for
-     
+      
       streak = 0;
-     
+      
     }
-   
+    
     return winner;
   }
  
@@ -316,12 +315,12 @@ public class vierGewinnt
     {
       return 3;
     } // end of if
-   
+    
     for (int c = 1; c > 0;c--)
     {
       c++;    
       colour = 1;
-      //fÃ¼r Gelb
+      //für Gelb
       //reihe von links nach rechts
       for (int a = 0; a < row; a++) {
         streak = 0;
@@ -345,9 +344,9 @@ public class vierGewinnt
           }
         } // end of for
       } // end of for
-     
+      
       streak = 0;
-     
+      
       //reihe von rechts nach links
       for (int a = 0; a < row; a++) {
         streak = 0;
@@ -371,9 +370,9 @@ public class vierGewinnt
           }
         } // end of for
       } // end of for
-     
+      
       streak = 0;
-     
+      
       //spalte von unten nach oben
       for (int b = 0; b < column; b++) {
         streak = 0;
@@ -397,9 +396,9 @@ public class vierGewinnt
           }
         } // end of for
       } // end of for
-     
+      
       streak = 0;
-     
+      
       //diagonale von links-unten nach rechts-oben
       for (int i = 0; i < 2; i++)
       {
@@ -425,13 +424,13 @@ public class vierGewinnt
           }
           b++;
         } // end of for
-       
+        
         streak = 0;
-       
+        
       }
-     
-     
-     
+      
+      
+      
       //diagonale von links-unten nach rechts-oben
       for (int i = 1; i < 3; i++)
       {
@@ -457,13 +456,13 @@ public class vierGewinnt
           }
           b++;
         } // end of for
-       
+        
         streak = 0;
-       
+        
       }
-     
-     
-     
+      
+      
+      
       //diagonale von rechts-unten nach links-oben
       for (int i = 0; i < 2; i++)
       {
@@ -489,13 +488,13 @@ public class vierGewinnt
           }
           b--;
         } // end of for
-       
+        
         streak = 0;
-       
+        
       }
-     
-     
-     
+      
+      
+      
       //diagonale von rechts-unten nach links-oben
       for (int i = 3; i < 5; i++)
       {
@@ -522,15 +521,15 @@ public class vierGewinnt
         }
         b--;
       } // end of for
-     
+      
       streak = 0;
-     
-   
-     
+      
+      
+      
       colour = 2;
       c--;
-     
-      //fÃ¼r Rot
+      
+      //für Rot
       //reihe von links nach rechts
       for (int a = 0; a < row; a++) {
         streak = 0;
@@ -554,9 +553,9 @@ public class vierGewinnt
           }
         } // end of for
       } // end of for
-     
+      
       streak = 0;
-     
+      
       //reihe von rechts nach links
       for (int a = 0; a < row; a++) {
         streak = 0;
@@ -580,9 +579,9 @@ public class vierGewinnt
           }
         } // end of for
       } // end of for
-     
+      
       streak = 0;
-     
+      
       //spalte von unten nach oben
       for (int b = 0; b < column; b++) {
         streak = 0;
@@ -606,9 +605,9 @@ public class vierGewinnt
           }
         } // end of for
       } // end of for
-     
+      
       streak = 0;
-     
+      
       //diagonale von links-unten nach rechts-oben
       for (int i = 0; i < 2; i++)
       {
@@ -634,13 +633,13 @@ public class vierGewinnt
           }
           b++;
         } // end of for
-       
+        
         streak = 0;
-       
+        
       }
-     
-     
-     
+      
+      
+      
       //diagonale von links-unten nach rechts-oben
       for (int i = 1; i < 3; i++)
       {
@@ -666,13 +665,13 @@ public class vierGewinnt
           }
           b++;
         } // end of for
-       
+        
         streak = 0;
-       
+        
       }
-     
-     
-     
+      
+      
+      
       //diagonale von rechts-unten nach links-oben
       for (int i = 0; i < 2; i++)
       {
@@ -698,13 +697,13 @@ public class vierGewinnt
           }
           b--;
         } // end of for
-       
+        
         streak = 0;
-       
+        
       }
-     
-     
-     
+      
+      
+      
       //diagonale von rechts-unten nach links-oben
       for (int i = 3; i < 5; i++)
       {
@@ -731,25 +730,20 @@ public class vierGewinnt
         }
         b--;
       } // end of for
-     
+      
       streak = 0;
-     
+      
     }
-   
-    //sonst random ein Stein setzen
-    Random wuerfel = new Random();
-   
-    for (int i = 0; i<10; i++)
-    {
-        int b = wuerfel.nextInt(6);
-        if (board[5][b]<=0)
-        {
-            return b;
-        }
-       
-    }
-   
+    
+    
+    
     return 7;
   }
- 
-}
+  
+  public static void main (String[]args)
+  {
+    vierGewinnt p1 = new vierGewinnt(6, 7, 1);
+    p1.fillboard();
+    p1.printboard(); 
+  } 
+  }
