@@ -1,11 +1,12 @@
-
 import java.io.Serializable;
+import java.io.*;
 public class vierGewinnt implements Serializable
 {
   private int row=6;
   private int column=7;
   private int player;
   int [][] board= new int[row][column];
+  Datenhaltungsschicht s3= new Datenhaltungsschicht ();
  
   public vierGewinnt(int row, int column, int player)
   {
@@ -740,10 +741,15 @@ public class vierGewinnt implements Serializable
     return 7;
   }
   
+  public void spielSpeichernAktivieren()
+  {
+    s3.spielSpeichern();
+    }
   public static void main (String[]args)
   {
     vierGewinnt p1 = new vierGewinnt(6, 7, 1);
     p1.fillboard();
     p1.printboard(); 
-  } 
+    } 
   }
+
